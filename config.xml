@@ -4,14 +4,13 @@
     id        = "com.phonegap.example"
     version   = "1.0.0">
 
-<name>PhoneGap Build Application</name>
+<name>Y Coleg Cymraeg Cenedlaethol</name>
 
 <description>
-A simple PhoneGap Build application.
+App ar gyfer y Coleg Cymraeg Cenedlaethol.
 </description>
 
-<author href="https://example.com" email="you@example.com">
-Your Name
-</author>
+<author href="https://www.colegcymraeg.ac.uk" email="gwybodaeth@colegcymraeg.ac.uk">
+Y Coleg Cymraeg Cenedlaethol</author>
 
 </widget>
