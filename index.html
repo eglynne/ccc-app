@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/hammer.js" type="text/javascript"></script>
+        <script src="js/hammerjquery.js" type="text/javascript"></script>
+        <script src="js/swipe.js"></script>
+        <script src="js/ChildBrowser.js"></script>
+
+        
+        
+      <!--  <script src="js/jquery.animate-enhanced.min.js" type="text/javascript"></script> -->
+        
+        <title>Hello World</title>
+    </head>
+    <body onload="onBodyLoad();">
+      <!-- <div id="header">
+          <h1>Coleg Cymraeg Cenedlaethol</h1>
+      </div> -->
+            <selection>
+      <div id="mainImg">
+          <img src="img/cake.jpg" id="llun">
+      </div>
+        
+    
+        
+        <div id="menuElement1">
+          Beth yw'r Coleg?
+            <div id="close1">x</div>
+        </div>
+        
+        <div id="menuDetails1" style="display: none;">
+            <p>Mae’r Coleg Cymraeg Cenedlaethol yn sefydliad cenedlaethol sydd yn chwarae rhan allweddol mewn cynllunio, cynnal a datblygu addysg ac ysgolheictod cyfrwng Cymraeg yn ein prifysgolion. </p>
+            <video id="fidio" src="mov/aelodau.m4v" controls></video>
+        </div>
+            
+        
+        <div id="menuElement2">
+            Chwilotydd Cyrsiau
+        </div>
+             
+        <div id="menuDetails2" style="display: none;">
+            <p>Mae’r Coleg Cymraeg Cenedlaethol yn sefydliad cenedlaethol sydd yn chwarae rhan allweddol mewn cynllunio, cynnal a datblygu addysg ac ysgolheictod cyfrwng Cymraeg yn ein prifysgolion. </p>
+            
+            <!-- <label for="select-choice-0" class="select">Prifysgol:</label> -->
+            <select name="select-choice-0" id="select-choice-1">
+                <option value="null">Dewiswch Prifysgol</option>
+                <option value="10">Prifysgol Caerdydd</option>
+                <option value="18">Prifysgol Cymru, Casnewyddt</option>
+                <option value="23">Prifysgol Aberystwyth</option>
+                <option value="28">Prifysgol Abertawe</option>
+                <option value="31">Prifysgol Drindod Dewi Sant</option>
+                <option value="37">Prifysgol Morgannwg</option>
+                <option value="52">Athrofa Prifysgol Cymru, Caerdydd</option>
+                <option value="57">Prifysgol Bangor</option>
+            </select>
+            
+            
+            <!-- <label for="select-choice-0" class="select">Cwrs:</label> -->
+            <select name="select-choice-0" id="select-choice-2">
+                <option value="null" >Dewiswch Cwrs</option>
+                <option value="1">Addysg ac Hyfforddiant</option>
+                <option value="2">Astudiaethau'r Amgylchedd a Daear...	</option>
+                <option value="3">Astudiaethau Gwybodaeth	</option>
+                <option value="4">Astudiaethau Cymreig</option>
+                <option value="5">Celf	</option>
+                <option value="6">Cemeg</option>
+                <option value="7">Cerddoriaeth</option>
+                <option value="8">Clasuron - Groeg a Lladin	</option>
+                <option value="9">Cymdeithaseg</option>
+                <option value="10">Cymraeg	</option>
+                <option value="11">Diwinyddiaeth ac Astudiaethau Crefydd	</option>
+                <option value="12">Gwleidyddiaeth	</option>
+                <option value="13">Gwyddorau Biolegol	</option>
+                <option value="14">Gwyddor Chwaraeon ac Ymarfer Corff	</option>
+                <option value="15">Hanes	</option>
+                <option value="16">Iechyd	</option>
+                <option value="17">Ieithoedd Modern	</option>
+                <option value="18">Mathemateg a Gwyddorau Ffisegol	</option>
+                <option value="19">Peirianneg	</option>
+                <option value="20">Rheolaeth a Busnes	</option>
+                <option value="21">Saesneg</option>
+                <option value="22">Seicoleg ac Astudiaethau Plentyndod	</option>
+                <option value="23">Diwydiannau Creadigol</option>
+                <option value="24">Y Gyfraith</option>
+                <option value="25">Ymchwil	</option>
+                <option value="26">Ysgrifennu Creadigol</option>
+                <option value="27">Astudiaethau Cymunedol</option>
+            </select>
+            <div class="HAHAYOUCANTSEEME"><p>.</p></div>
+            <a id="search" class="chwilio" onclick="doSearch()" style="margin-left: 35%">Chwilio</a>
+            
+            
+            
+            <div class="HAHAYOUCANTSEEME"><p>.</p></div>
+            
+            <div id="XMLContent"></div>
+            <!--
+            <div id='slider4' class='swipe'>
+                <div>
+                    <div style="display:block"><div><a href="http://itunes.apple.com/gb/itunes-u/gwyddorau-biolegol-ymarferol/id560088440?mt=10" target="_blank"><img src="img/biolegol.png"></a></div></div>
+                    <div style="display:none"><div><a href="http://itunes.apple.com/gb/itunes-u/academi-cynadleddau-achos/id551008196?mt=10" target="_blank"><img src="img/academi.png"></a></div></div>
+                    <div style="display:none"><div><a href="http://itunes.apple.com/gb/itunes-u/mwy-na-geiriau.../id559780179?mt=10" target="_blank"><img src="img/geiriau.png"></a></div></div>
+                </div>
+            </div>
+             -->
+            
+                  </div>
+        
+        <div id="menuElement3">
+            Ymaelodi
+        </div>
+                
+        <div id="menuDetails3" style="display: none;">
+            <p>Mae system aelodaeth y Coleg Cymraeg Cenedlaethol yn caniatáu i unrhyw un sydd â diddordeb yng ngwaith y Coleg i ddod yn aelod o gymuned academaidd y Coleg.</p>
+            <a href="http://www.colegcymraeg.ac.uk/myfyrwyr/m/" target="_blank" class="botwm">Ymaelodwch</a>
+        </div>
+        
+                
+
+            
+    </selection>
+        <footer>Adeiladwyd yng Nhgaerfyrddin.</footer>
+        
+        <script type="text/javascript" src="cordova-2.1.0.js"></script>
+        <script src="js/jquery.unfold.js" type="text/javascript"></script>
+        <script src="js/app.js"></script>
+    </body>
+    
+    <script>
+
+        
+        //  app.initialize();
+        
+                </script>
+
+
+
+    
+</html>
